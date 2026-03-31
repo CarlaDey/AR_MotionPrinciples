@@ -22,16 +22,6 @@
             }
         });
     };
-    window.onload = function() {
-        // Ladescreen ausblenden sobald die Scene bereit ist
-        document.querySelector('a-scene').addEventListener('loaded', function () {
-            document.querySelector('.arjs-loader').style.display = 'none';
-        });
-
-        AFRAME.registerComponent('videohandler', {
-            // ... dein bestehender Code
-        });
-    };
 </script>
 
 <style>
@@ -65,7 +55,7 @@
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
-            <video src="mov_bbb"
+            <video src="mov_bbb.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop
                 crossorigin webkit-playsinline autoplay muted playsinline>
             </video>
